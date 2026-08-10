@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Circle } from "lucide-react";
 import { useMouseParallax } from "../hooks/useMouseParallax.js";
+import { useLanguage } from "../context/LanguageContext.jsx";
+import { translations } from "../data/translations.js";
 
 const codeLines = [
   { text: "const hmpi = {", color: "text-slate-soft" },
@@ -20,6 +22,8 @@ const nodes = [
 
 const Hero = () => {
   const { ref, x, y } = useMouseParallax(16);
+  const { lang } = useLanguage();
+  const t = translations[lang].hero;
 
   return (
     <section
@@ -49,7 +53,7 @@ const Hero = () => {
           >
             <Sparkles size={14} className="text-cyan-glow" />
             <span className="font-mono text-xs tracking-wide text-slate-soft">
-              Himpunan Mahasiswa Prodi Informatika
+              {t.badge}
             </span>
           </motion.div>
 
@@ -59,9 +63,9 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl"
           >
-            Menginspirasi,{" "}
-            <span className="text-gradient">Inovatif</span>, dan Berdampak
-            dalam Dunia Informatika
+            {t.headingPart1}
+            <span className="text-gradient">{t.headingHighlight}</span>
+            {t.headingPart2}
           </motion.h1>
 
           <motion.p
@@ -70,10 +74,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-xl text-base leading-relaxed text-slate-soft sm:text-lg"
           >
-            HMPI adalah rumah bagi mahasiswa Informatika untuk bertumbuh
-            melalui riset, karya, dan kolaborasi. Kami menghubungkan
-            teori di ruang kelas dengan pengalaman nyata dunia teknologi
-            melalui program kerja yang relevan dan berkelanjutan.
+            {t.paragraph}
           </motion.p>
 
           <motion.div
@@ -90,7 +91,7 @@ const Hero = () => {
               style={{ transformStyle: "preserve-3d" }}
               className="btn-primary"
             >
-              Jelajahi Program Kerja
+              {t.ctaPrimary}
               <ArrowRight size={18} />
             </motion.a>
             <motion.a
@@ -101,7 +102,7 @@ const Hero = () => {
               style={{ transformStyle: "preserve-3d" }}
               className="btn-secondary"
             >
-              Kenali Anggota Kami
+              {t.ctaSecondary}
             </motion.a>
           </motion.div>
 
@@ -111,7 +112,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="flex items-center gap-6 pt-2"
           >
-            {["25+ Anggota Aktif", "12 Program Kerja", "7 Divisi"].map((item) => (
+            {t.stats.map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <Circle size={6} className="fill-cyan-glow text-cyan-glow" />
                 <span className="text-xs font-medium text-slate-soft sm:text-sm">
@@ -129,49 +130,49 @@ const Hero = () => {
           className="relative mx-auto w-full max-w-md"
         >
           <motion.div style={{ x, y }}>
-          <motion.div
-            animate={{ y: [0, -14, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            whileHover={{ rotate: -1, scale: 1.02 }}
-            className="card-surface shadow-card overflow-hidden"
-          >
-            <div className="flex items-center gap-2 border-b border-white/10 bg-navy-800/80 px-4 py-3">
-              <span className="h-3 w-3 rounded-full bg-red-400/70" />
-              <span className="h-3 w-3 rounded-full bg-yellow-400/70" />
-              <span className="h-3 w-3 rounded-full bg-green-400/70" />
-              <span className="ml-3 font-mono text-xs text-slate-soft">
-                hmpi_profile.js
-              </span>
-            </div>
-            <div className="space-y-2 px-6 py-8 font-mono text-sm sm:text-base">
-              {codeLines.map((line, index) => (
-                <motion.p
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.6 + index * 0.15 }}
-                  className={line.color}
-                >
-                  {line.text}
-                </motion.p>
-              ))}
-              <motion.span
-                className="inline-block h-4 w-2 bg-cyan-glow animate-blink"
-                aria-hidden="true"
-              />
-            </div>
-          </motion.div>
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              whileHover={{ rotate: -1, scale: 1.02 }}
+              className="card-surface shadow-card overflow-hidden"
+            >
+              <div className="flex items-center gap-2 border-b border-white/10 bg-navy-800/80 px-4 py-3">
+                <span className="h-3 w-3 rounded-full bg-red-400/70" />
+                <span className="h-3 w-3 rounded-full bg-yellow-400/70" />
+                <span className="h-3 w-3 rounded-full bg-green-400/70" />
+                <span className="ml-3 font-mono text-xs text-slate-soft">
+                  hmpi_profile.js
+                </span>
+              </div>
+              <div className="space-y-2 px-6 py-8 font-mono text-sm sm:text-base">
+                {codeLines.map((line, index) => (
+                  <motion.p
+                    key={index}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.6 + index * 0.15 }}
+                    className={line.color}
+                  >
+                    {line.text}
+                  </motion.p>
+                ))}
+                <motion.span
+                  className="inline-block h-4 w-2 bg-cyan-glow animate-blink"
+                  aria-hidden="true"
+                />
+              </div>
+            </motion.div>
 
-          <motion.div
-            animate={{ y: [0, 14, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="card-surface shadow-glow-cyan absolute -bottom-8 -left-8 hidden w-44 rounded-xl px-4 py-3 sm:block"
-          >
-            <p className="font-mono text-[11px] text-slate-soft">Uptime Sistem</p>
-            <p className="font-display text-lg font-semibold text-cyan-glow">
-              99.9% Aktif
-            </p>
-          </motion.div>
+            <motion.div
+              animate={{ y: [0, 14, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              className="card-surface shadow-glow-cyan absolute -bottom-8 -left-8 hidden w-44 rounded-xl px-4 py-3 sm:block"
+            >
+              <p className="font-mono text-[11px] text-slate-soft">{t.uptimeLabel}</p>
+              <p className="font-display text-lg font-semibold text-cyan-glow">
+                {t.uptimeValue}
+              </p>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

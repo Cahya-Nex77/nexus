@@ -3,19 +3,10 @@ import { Target, Eye, Users, Trophy, Layers } from "lucide-react";
 import SectionHeading from "./ui/SectionHeading.jsx";
 import AnimatedCounter from "./ui/AnimatedCounter.jsx";
 import AmbientBackground from "./AmbientBackground.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
+import { translations } from "../data/translations.js";
 
-const stats = [
-  { icon: Users, value: 25, suffix: "+", label: "Anggota Aktif" },
-  { icon: Trophy, value: 12, suffix: "", label: "Program Kerja Selesai" },
-  { icon: Layers, value: 7, suffix: "", label: "Divisi Organisasi" },
-];
-
-const missions = [
-  "Membangun ekosistem belajar Informatika yang kolaboratif dan inklusif.",
-  "Mendorong riset dan inovasi teknologi yang berdampak bagi masyarakat.",
-  "Menjembatani mahasiswa dengan industri melalui program kerja nyata.",
-  "Mengembangkan karakter kepemimpinan dan soft skill mahasiswa Informatika.",
-];
+const statIcons = [Users, Trophy, Layers];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24, rotateX: -12 },
@@ -28,6 +19,9 @@ const cardVariants = {
 };
 
 const About = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang].about;
+
   return (
     <motion.section
       id="tentang"
@@ -40,14 +34,14 @@ const About = () => {
       <AmbientBackground variant="a" />
 
       <SectionHeading
-        eyebrow="Tentang Kami"
-        title="Mengenal Lebih Dekat HMPI"
-        subtitle="Himpunan Mahasiswa Prodi Informatika hadir sebagai wadah aspirasi, kolaborasi, dan pengembangan diri mahasiswa Informatika menuju generasi teknologi yang unggul."
+        eyebrow={t.eyebrow}
+        title={t.title}
+        subtitle={t.subtitle}
       />
 
       <div className="relative mt-14 grid grid-cols-1 gap-6 perspective-1000 lg:grid-cols-3">
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
+        {t.stats.map((stat, index) => {
+          const Icon = statIcons[index];
           return (
             <motion.div
               key={stat.label}
@@ -85,13 +79,10 @@ const About = () => {
         >
           <div className="mb-4 flex items-center gap-3">
             <Eye size={22} className="text-cyan-glow" />
-            <h3 className="font-display text-xl font-semibold text-white">Visi</h3>
+            <h3 className="font-display text-xl font-semibold text-white">{t.visionTitle}</h3>
           </div>
           <p className="leading-relaxed text-slate-soft">
-            Menjadi himpunan mahasiswa yang unggul dalam mencetak talenta
-            Informatika yang kompeten, kolaboratif, dan berintegritas, serta
-            berperan aktif dalam kemajuan teknologi di tingkat kampus maupun
-            nasional.
+            {t.visionText}
           </p>
         </motion.div>
 
@@ -106,10 +97,10 @@ const About = () => {
         >
           <div className="mb-4 flex items-center gap-3">
             <Target size={22} className="text-indigo-glow" />
-            <h3 className="font-display text-xl font-semibold text-white">Misi</h3>
+            <h3 className="font-display text-xl font-semibold text-white">{t.missionTitle}</h3>
           </div>
           <ul className="space-y-3">
-            {missions.map((mission, index) => (
+            {t.missions.map((mission, index) => (
               <motion.li
                 key={mission}
                 initial={{ opacity: 0, x: 12 }}
