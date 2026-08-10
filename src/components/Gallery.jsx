@@ -4,12 +4,13 @@ import { ZoomIn } from "lucide-react";
 import SectionHeading from "./ui/SectionHeading.jsx";
 import AmbientBackground from "./AmbientBackground.jsx";
 import { gallery } from "../data/gallery.js";
+import { useLanguage } from "../context/LanguageContext.jsx";
+import { translations } from "../data/translations.js";
 
-const GalleryCard = ({ item, index }) => {
+const GalleryCard = ({ item, content, index }) => {
   const cardRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
-  // Parallax berbasis scroll: gambar bergerak sedikit berbeda dari container
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
@@ -39,10 +40,9 @@ const GalleryCard = ({ item, index }) => {
       className={`card-surface perspective-1000 group relative overflow-hidden mask-fade-edges ${item.span}`}
     >
       <motion.div style={{ y: parallaxY }} className="absolute inset-0 -m-4">
-        {/* Ken Burns: pan + zoom perlahan tanpa henti */}
         <motion.img
           src={item.image}
-          alt={item.title}
+          alt={content.title}
           loading="lazy"
           animate={{
             scale: [1, 1.15, 1.05, 1.18, 1],
@@ -63,10 +63,10 @@ const GalleryCard = ({ item, index }) => {
           <ZoomIn size={16} className="text-white" />
         </span>
         <h3 className="font-display text-base font-semibold text-white">
-          {item.title}
+          {content.title}
         </h3>
         <p className="mt-1 text-xs leading-relaxed text-slate-soft">
-          {item.caption}
+          {content.caption}
         </p>
       </div>
     </motion.figure>
@@ -74,6 +74,9 @@ const GalleryCard = ({ item, index }) => {
 };
 
 const Gallery = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang].gallery;
+
   return (
     <motion.section
       id="dokumentasi"
@@ -86,14 +89,14 @@ const Gallery = () => {
       <AmbientBackground variant="a" />
 
       <SectionHeading
-        eyebrow="Dokumentasi"
-        title="Momen Kegiatan HMPI"
-        subtitle="Rangkaian dokumentasi kegiatan yang menjadi jejak langkah kolaborasi dan karya anggota HMPI sepanjang periode kepengurusan."
+        eyebrow={t.eyebrow}
+        title={t.title}
+        subtitle={t.subtitle}
       />
 
       <div className="relative mt-12 grid auto-rows-[220px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {gallery.map((item, index) => (
-          <GalleryCard item={item} index={index} key={item.id} />
+          <GalleryCard item={item} content={t.items[item.id]} index={index} key={item.id} />
         ))}
       </div>
     </motion.section>

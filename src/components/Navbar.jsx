@@ -2,19 +2,23 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import hmpiLogo from "../assets/hmpi-logo.jpg";
-
-const navLinks = [
-  { label: "Beranda", href: "#beranda" },
-  { label: "Tentang", href: "#tentang" },
-  { label: "Program Kerja", href: "#program" },
-  { label: "Dokumentasi", href: "#dokumentasi" },
-  { label: "Anggota", href: "#anggota" },
-  { label: "Kontak", href: "#kontak" },
-];
+import { useLanguage } from "../context/LanguageContext.jsx";
+import { translations } from "../data/translations.js";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, toggleLang } = useLanguage();
+  const t = translations[lang];
+
+  const navLinks = [
+    { label: t.nav.beranda, href: "#beranda" },
+    { label: t.nav.tentang, href: "#tentang" },
+    { label: t.nav.program, href: "#program" },
+    { label: t.nav.dokumentasi, href: "#dokumentasi" },
+    { label: t.nav.anggota, href: "#anggota" },
+    { label: t.nav.kontak, href: "#kontak" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24);
@@ -28,11 +32,29 @@ const Navbar = () => {
 
   const handleNavClick = () => setMenuOpen(false);
 
+  const LanguageToggle = ({ className = "" }) => (
+    <div className={`flex items-center bg-white/5 border border-white/10 rounded-full p-0.5 ${className}`}>
+      <button
+        onClick={() => toggleLang("id")}
+        className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${lang === "id" ? "bg-white/10 text-white" : "text-slate-soft"
+          }`}
+      >
+        ID
+      </button>
+      <button
+        onClick={() => toggleLang("en")}
+        className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${lang === "en" ? "bg-white/10 text-white" : "text-slate-soft"
+          }`}
+      >
+        EN
+      </button>
+    </div>
+  );
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav shadow-card" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav shadow-card" : "bg-transparent"
+        }`}
     >
       <nav className="section-padding !py-4 flex items-center justify-between">
         <a href="#beranda" className="flex items-center gap-2.5 group perspective-1000">
@@ -67,9 +89,12 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a href="#kontak" className="hidden lg:inline-flex btn-primary !px-6 !py-2.5 text-sm">
-          Gabung HMPI
-        </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <LanguageToggle />
+          <a href="#kontak" className="btn-primary !px-6 !py-2.5 text-sm">
+            {t.joinButton}
+          </a>
+        </div>
 
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -106,18 +131,19 @@ const Navbar = () => {
                   </a>
                 </motion.li>
               ))}
+              <LanguageToggle className="mt-2 w-fit" />
               <a
                 href="#kontak"
                 onClick={handleNavClick}
                 className="btn-primary mt-2 w-full text-sm"
               >
-                Gabung HMPI
+                {t.joinButton}
               </a>
             </ul>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </header >
   );
 };
 
