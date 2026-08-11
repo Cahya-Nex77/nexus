@@ -11,14 +11,14 @@ export const translations = {
         joinButton: "Gabung HMPI",
         hero: {
             badge: "Himpunan Mahasiswa Prodi Informatika",
-            headingPart1: "Menginspirasi, ",
-            headingHighlight: "Inovatif",
-            headingPart2: ", dan Berdampak dalam Dunia Informatika",
+            headingPart1: "Solid, ",
+            headingHighlight: "Progresif",
+            headingPart2: ", dan Inovatif Membangun Generasi Informatika",
             paragraph:
-                "HMPI adalah rumah bagi mahasiswa Informatika untuk bertumbuh melalui riset, karya, dan kolaborasi. Kami menghubungkan teori di ruang kelas dengan pengalaman nyata dunia teknologi melalui program kerja yang relevan dan berkelanjutan.",
+                "HMPI (Himpunan Mahasiswa Prodi Informatika) adalah wadah pengembangan potensi, kreativitas, dan solidaritas mahasiswa dalam bidang teknologi dan informatika.",
             ctaPrimary: "Jelajahi Program Kerja",
             ctaSecondary: "Kenali Anggota Kami",
-            stats: ["25+ Anggota Aktif", "12 Program Kerja", "7 Divisi"],
+            stats: ["28 Anggota Aktif", "19 Program Kerja", "4 Divisi"],
             uptimeLabel: "Uptime Sistem",
             uptimeValue: "99.9% Aktif",
         },
@@ -28,19 +28,20 @@ export const translations = {
             subtitle:
                 "Himpunan Mahasiswa Prodi Informatika hadir sebagai wadah aspirasi, kolaborasi, dan pengembangan diri mahasiswa Informatika menuju generasi teknologi yang unggul.",
             stats: [
-                { value: 25, suffix: "+", label: "Anggota Aktif" },
-                { value: 12, suffix: "", label: "Program Kerja Selesai" },
-                { value: 7, suffix: "", label: "Divisi Organisasi" },
+                { value: 28, suffix: "+", label: "Anggota Aktif" },
+                { value: 2, suffix: "", label: "Program Kerja Selesai" },
+                { value: 4, suffix: "", label: "Divisi Organisasi" },
             ],
             visionTitle: "Visi",
             visionText:
-                "Menjadi himpunan mahasiswa yang unggul dalam mencetak talenta Informatika yang kompeten, kolaboratif, dan berintegritas, serta berperan aktif dalam kemajuan teknologi di tingkat kampus maupun nasional.",
+                "Mewujudkan Himpunan Mahasiswa Informatika yang solid, progresif, dan inovatif melalui kolaborasi serta pengembangan potensi anggota.",
             missionTitle: "Misi",
             missions: [
-                "Membangun ekosistem belajar Informatika yang kolaboratif dan inklusif.",
-                "Mendorong riset dan inovasi teknologi yang berdampak bagi masyarakat.",
-                "Menjembatani mahasiswa dengan industri melalui program kerja nyata.",
-                "Mengembangkan karakter kepemimpinan dan soft skill mahasiswa Informatika.",
+                "Mempererat solidaritas dan rasa kekeluargaan antar anggota.",
+                "Mengembangkan kualitas akademik dan nonakademik mahasiswa.",
+                "Menciptakan program kerja yang aktif, kreatif, dan bermanfaat.",
+                "Menjalin komunikasi serta kolaborasi yang baik didalam maupun diluar himpunan.",
+                "Membangun organisasi yang responsif, adaptif, dan berintegritas dalam menghadapi perkembangan teknologi serta kebutuhan mahasiswa"
             ],
         },
         programs: {
