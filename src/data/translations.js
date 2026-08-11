@@ -355,7 +355,30 @@ export const translations = {
                 kewirausahaan: "Entrepreneurship",
                 media: "Media & Creative",
                 pengabdian: "Community Service",
+                contact: {
+                    eyebrow: "Hubungi Kami",
+                    title: "Mari Berkolaborasi dengan HMPI",
+                    subtitle:
+                        "Punya pertanyaan, ide kolaborasi, atau ingin bergabung dengan kegiatan kami? Sampaikan pesanmu, tim kami akan segera merespons.",
+                    info: {
+                        email: { label: "Email Resmi", value: "hmpi@kampusinformatika.ac.id" },
+                        address: {
+                            label: "Alamat Sekretariat",
+                            value: "Gedung Fakultas Ilmu Komputer, Kampus Informatika, Lt. 2",
+                        },
+                        instagram: { label: "Instagram", value: "@hmpi.informatika" },
+                        youtube: { label: "YouTube", value: "HMPI Informatika Channel" },
+                    },
+                    form: {
+                        nameLabel: "Nama Lengkap",
+                        namePlaceholder: "Masukkan nama lengkap",
+                        emailLabel: "Alamat Email",
+                        emailPlaceholder: "nama@email.com",
+                        messageLabel: "Pesan",
+                        messagePlaceholder: "Tulis pesan, pertanyaan, atau ide kolaborasimu di sini...",
+                        submitButton: "Kirim Pesan",
+                        successMessage: "Pesan berhasil terkirim! Terima kasih sudah menghubungi HMPI.",
+                    },
+                },
             },
-        },
-    },
-};
+        };
