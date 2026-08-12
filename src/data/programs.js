@@ -1,7 +1,7 @@
-export const categoryKeys = ["all", "workshop", "competition", "seminar", "service"];
+export const categoryKeys = ["all", "seminar", "competition", "workshop", "service"];
 
 export const programItems = [
-  { id: 1, categoryKey: "workshop", tagKey: "popular" },
+  { id: 1, categoryKey: "seminar", tagKey: "popular" },
   { id: 2, categoryKey: "competition", tagKey: "featured" },
   { id: 3, categoryKey: "seminar", tagKey: null },
   { id: 4, categoryKey: "service", tagKey: null },
