@@ -3,15 +3,14 @@ import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
 import { CalendarDays, ArrowUpRight } from "lucide-react";
 import SectionHeading from "./ui/SectionHeading.jsx";
 import AmbientBackground from "./AmbientBackground.jsx";
-import { categoryKeys, programItems } from "../data/programs.js";
+import { departmentKeys, programItems } from "../data/programs.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { translations } from "../data/translations.js";
 
 const ProgramCard = ({ program, t }) => {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const content = t.items[program.id];
-  const categoryLabel = t.categories[program.categoryKey];
-  const tagLabel = program.tagKey ? t.tags[program.tagKey] : null;
+  const departmentLabel = t.departments[program.departmentKey];
 
   const handleMouseMove = (event) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -38,34 +37,30 @@ const ProgramCard = ({ program, t }) => {
       }}
       className="card-surface perspective-1000 group relative flex flex-col gap-4 overflow-hidden p-6 transition-shadow duration-300 hover:shadow-glow"
     >
-      {tagLabel && (
-        <span
-          style={{ transform: "translateZ(30px)" }}
-          className="absolute right-4 top-4 rounded-full border border-cyan-glow/40 bg-cyan-glow/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-cyan-glow"
-        >
-          {tagLabel}
-        </span>
-      )}
       <span
         style={{ transform: "translateZ(24px)" }}
         className="w-fit rounded-full bg-white/5 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-indigo-glow"
       >
-        {categoryLabel}
+        {departmentLabel}
       </span>
+
       <h3
         style={{ transform: "translateZ(24px)" }}
         className="font-display text-lg font-semibold leading-snug text-white"
       >
         {content.title}
       </h3>
+
       <p className="text-sm leading-relaxed text-slate-soft">
         {content.description}
       </p>
+
       <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-4">
         <span className="flex items-center gap-2 text-xs text-slate-soft">
           <CalendarDays size={14} />
           {content.date}
         </span>
+
         <motion.span
           whileHover={{ x: 3, y: -3, rotateY: 180 }}
           transition={{ duration: 0.5 }}
@@ -81,12 +76,14 @@ const ProgramCard = ({ program, t }) => {
 const Programs = () => {
   const { lang } = useLanguage();
   const t = translations[lang].programs;
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeDepartment, setActiveDepartment] = useState("all");
 
   const filteredPrograms =
-    activeCategory === "all"
+    activeDepartment === "all"
       ? programItems
-      : programItems.filter((program) => program.categoryKey === activeCategory);
+      : programItems.filter(
+          (program) => program.departmentKey === activeDepartment
+        );
 
   return (
     <motion.section
@@ -107,32 +104,65 @@ const Programs = () => {
 
       <LayoutGroup>
         <div className="relative mt-10 flex flex-wrap gap-2 perspective-1000">
-          {categoryKeys.map((categoryKey) => {
-            const isActive = categoryKey === activeCategory;
+          {departmentKeys.map((departmentKey) => {
+            const isActive = departmentKey === activeDepartment;
+
             return (
               <motion.button
-                key={categoryKey}
-                onClick={() => setActiveCategory(categoryKey)}
+                key={departmentKey}
+                onClick={() => setActiveDepartment(departmentKey)}
                 whileHover={{ rotateX: -8, y: -2 }}
                 whileTap={{ rotateX: 10, scale: 0.94 }}
-                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 20,
+                }}
                 style={{ transformStyle: "preserve-3d" }}
-                className={`relative rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${isActive ? "text-white" : "text-slate-soft hover:text-white"
-                  }`}
+                className={`relative rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${
+                  isActive
+                    ? "text-white"
+                    : "text-slate-soft hover:text-white"
+                }`}
               >
                 {isActive && (
                   <motion.span
-                    layoutId="active-category-pill"
+                    layoutId="active-department-pill"
                     className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-glow to-cyan-glow shadow-glow"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 350,
+                      damping: 30,
+                    }}
                   />
                 )}
-                <span className="relative z-10">{t.categories[categoryKey]}</span>
+
+                <span className="relative z-10">
+                  {t.departments[departmentKey]}
+                </span>
               </motion.button>
             );
           })}
         </div>
       </LayoutGroup>
+
+      {activeDepartment !== "all" && (
+          <motion.div
+             key={activeDepartment}
+             initial={{ opacity: 0, y: 10 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.3 }}
+             className="relative mt-6 max-w-3xl"
+          >
+             <h3 className="font-display text-xl font-semibold text-white">
+                 {t.departmentDescriptions[activeDepartment].name}
+             </h3>
+
+             <p className="mt-2 text-sm leading-relaxed text-slate-soft">
+                 {t.departmentDescriptions[activeDepartment].description}
+             </p>
+          </motion.div>
+      )}
 
       <motion.div
         layout
@@ -140,7 +170,11 @@ const Programs = () => {
       >
         <AnimatePresence mode="popLayout">
           {filteredPrograms.map((program) => (
-            <ProgramCard program={program} t={t} key={program.id} />
+            <ProgramCard
+              program={program}
+              t={t}
+              key={program.id}
+            />
           ))}
         </AnimatePresence>
       </motion.div>
