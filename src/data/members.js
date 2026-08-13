@@ -15,12 +15,11 @@ export const members = [
   { id: 11, name: "M Ferdinan Sidiq", roleKey: "Staff Deminfo", divisionKey: "Deminfo", photo: "/gallery/ferdi.jpeg", instagram: "https://instagram.com/yusuf.hakim", linkedin: "https://linkedin.com/in/yusuf-hakim" },
   { id: 12, name: "M Chusen Kamal", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/husen.jpeg", instagram: "https://instagram.com/putri.wulan", linkedin: "https://linkedin.com/in/putri-wulandari" },
   { id: 13, name: "M Rizqu Adnin Zidana", roleKey: "Bendahara", divisionKey: "Bendahara", photo: "/gallery/adnin.jpeg", instagram: "https://instagram.com/aditya.rahman", linkedin: "https://linkedin.com/in/aditya-rahman" },
-  { id: 14, name: "M Mariffatur Rizky", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/risky.jpeg", instagram: "https://instagram.com/della.anjani", linkedin: "https://linkedin.com/in/della-anjani" },
+  { id: 14, name: "M Mariffatur Rizky", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/rizky.jpeg", instagram: "https://instagram.com/della.anjani", linkedin: "https://linkedin.com/in/della-anjani" },
   { id: 15, name: "Septian Ardi Nugroho", roleKey: "Bendahara", divisionKey: "Bendahara", photo: "/gallery/groho.jpeg", instagram: "https://instagram.com/farhan.maulana", linkedin: "https://linkedin.com/in/farhan-maulana" },
-  { id: 16, name: "Sahrul Atiq Wibiyono", roleKey: "Bendahara", divisionKey: "Bendahara", photo: "/gallery/sahrul.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
+  { id: 16, name: "Sahrul Atiq Wibiyono", roleKey: "Bendahara", divisionKey: "Bendahara", photo: "/gallery/sahru.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
   { id: 17, name: "Naufal Fajar Adityo", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/naufal.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
   { id: 18, name: "Riza Farkhan Nulhakim", roleKey: "Staff Advas", divisionKey: "Advas", photo: "/gallery/riza.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
-  { id: 19, name: "Rizky Maulana", roleKey: "Staff Advas", divisionKey: "Advas", photo: "/gallery/rizky.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
 ];
 
 
