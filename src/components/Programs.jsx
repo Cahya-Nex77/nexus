@@ -147,21 +147,21 @@ const Programs = () => {
       </LayoutGroup>
 
       {activeDepartment !== "all" && (
-          <motion.div
-             key={activeDepartment}
-             initial={{ opacity: 0, y: 10 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.3 }}
-             className="relative mt-6 max-w-3xl"
-          >
-             <h3 className="font-display text-xl font-semibold text-white">
-                 {t.departmentDescriptions[activeDepartment].name}
-             </h3>
+        <motion.div
+          key={activeDepartment}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="relative mt-6 max-w-3xl"
+        >
+          <h3 className="font-display text-xl font-semibold text-white">
+            {t.departmentDescriptions[activeDepartment].name}
+          </h3>
 
-             <p className="mt-2 text-sm leading-relaxed text-slate-soft">
-                 {t.departmentDescriptions[activeDepartment].description}
-             </p>
-          </motion.div>
+          <p className="mt-2 text-sm leading-relaxed text-slate-soft">
+            {t.departmentDescriptions[activeDepartment].description}
+          </p>
+        </motion.div>
       )}
 
       <motion.div

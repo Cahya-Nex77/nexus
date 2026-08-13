@@ -63,27 +63,27 @@ export const translations = {
 
             departmentDescriptions: {
                 psda: {
-                     name: "Pengembangan Sumber Daya Anggota",
-                     description:
-                         "Berfokus pada pengembangan potensi, kompetensi, dan kualitas anggota melalui kegiatan pembinaan, pelatihan, serta pengembangan organisasi.",
+                    name: "Pengembangan Sumber Daya Anggota",
+                    description:
+                        "Berfokus pada pengembangan potensi, kompetensi, dan kualitas anggota melalui kegiatan pembinaan, pelatihan, serta pengembangan organisasi.",
                 },
 
                 advas: {
-                     name: "Advokasi dan Aspirasi",
-                     description:
-                         "Menjadi wadah penyampaian aspirasi mahasiswa serta membantu mengawal kebutuhan, hak, dan kepentingan mahasiswa Informatika.",
+                    name: "Advokasi dan Aspirasi",
+                    description:
+                        "Menjadi wadah penyampaian aspirasi mahasiswa serta membantu mengawal kebutuhan, hak, dan kepentingan mahasiswa Informatika.",
                 },
 
                 hubeks: {
-                     name: "Hubungan Eksternal",
-                     description:
-                         "Bertugas membangun dan menjaga hubungan serta kerja sama HMPI dengan pihak eksternal, seperti organisasi mahasiswa, alumni, institusi, dan mitra lainnya.",
+                    name: "Hubungan Eksternal",
+                    description:
+                        "Bertugas membangun dan menjaga hubungan serta kerja sama HMPI dengan pihak eksternal, seperti organisasi mahasiswa, alumni, institusi, dan mitra lainnya.",
                 },
 
                 deminfo: {
-                     name: "Media dan Dokumentasi Informatika",
-                     description:
-                         "Bertanggung jawab mengelola informasi, publikasi, media sosial, serta dokumentasi kegiatan dan identitas visual HMPI.",
+                    name: "Media dan Dokumentasi Informatika",
+                    description:
+                        "Bertanggung jawab mengelola informasi, publikasi, media sosial, serta dokumentasi kegiatan dan identitas visual HMPI.",
                 },
             },
 
@@ -331,7 +331,8 @@ export const translations = {
             badge: "Informatics Study Program Student Association",
             headingPart1: "Solid, ",
             headingHighlight: "Progressive",
-            headingPart2: ", and Innovative in Building the Next Generation of Informatics",
+            headingPart2:
+                ", and Innovative in Building the Next Generation of Informatics",
             paragraph:
                 "HMPI (Informatics Student Association) is a platform for developing students' potential, creativity, and solidarity in the fields of technology and informatics.",
             ctaPrimary: "Explore Our Programs",
@@ -378,30 +379,30 @@ export const translations = {
             },
 
             departmentDescriptions: {
-            psda: {
-                 name: "Development of member resources",
-                 description:
-                     "Focuses on developing members' potential, competence, and quality through training, mentoring, and organizational development activities.",
-            },
+                psda: {
+                    name: "Development of Member Resources",
+                    description:
+                        "Focuses on developing members' potential, competence, and quality through training, mentoring, and organizational development activities.",
+                },
 
-            advas: {
-                 name: "Advocacy and Aspirations",
-                 description:
-                     "Serves as a platform for student aspirations and helps advocate for the needs, rights, and interests of Informatics students.",
-            },
+                advas: {
+                    name: "Advocacy and Aspirations",
+                    description:
+                        "Serves as a platform for student aspirations and helps advocate for the needs, rights, and interests of Informatics students.",
+                },
 
-            hubeks: {
-                 name: "External Relations",
-                 description:
-                 "Builds and maintains relationships and collaborations between HMPI and external organizations, alumni, institutions, and other partners.",
-            },
+                hubeks: {
+                    name: "External Relations",
+                    description:
+                        "Builds and maintains relationships and collaborations between HMPI and external organizations, alumni, institutions, and other partners.",
+                },
 
-            deminfo: {
-                 name: "Media and Informatics Documentation",
-                 description:
-                     "Manages information, publications, social media, documentation, and the visual identity of HMPI activities.",
+                deminfo: {
+                    name: "Media and Informatics Documentation",
+                    description:
+                        "Manages information, publications, social media, documentation, and the visual identity of HMPI activities.",
+                },
             },
-        },
 
             items: {
                 1: {
