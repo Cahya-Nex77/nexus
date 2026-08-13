@@ -6,9 +6,10 @@ import { translations } from "../data/translations.js";
 
 const codeLines = [
   { text: "const hmpi = {", color: "text-slate-soft" },
-  { text: "  visi: 'Inovatif & Berdampak',", color: "text-cyan-glow" },
-  { text: "  anggota: 25,", color: "text-cyan-glow" },
-  { text: "  status: 'aktif_berkarya',", color: "text-indigo-glow" },
+  { text: "  visi: 'Solid, Progresif & Inovatif',", color: "text-cyan-glow" },
+  { text: "  anggota: 28,", color: "text-cyan-glow" },
+  { text: "  programKerja: 19,", color: "text-cyan-glow" },
+  { text: "  status: 'kolaborasi_aktif',", color: "text-indigo-glow" },
   { text: "};", color: "text-slate-soft" },
 ];
 

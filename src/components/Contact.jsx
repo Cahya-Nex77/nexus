@@ -7,22 +7,22 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email Resmi",
-    value: "hmpiinformatikaupb@gmail.com",
+    value: "hmpi@kampusinformatika.ac.id",
   },
   {
     icon: MapPin,
-    label: "Alamat Universitas Peradaban",
-    value: " Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276",
+    label: "Alamat Sekretariat",
+    value: "Gedung Fakultas Ilmu Komputer, Kampus Informatika, Lt. 2",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    value: "hmpi.up",
+    value: "@hmpi.informatika",
   },
   {
     icon: Youtube,
     label: "YouTube",
-    value: "HMPI UPB",
+    value: "HMPI Informatika Channel",
   },
 ];
 
