@@ -22,7 +22,7 @@ export const translations = {
             ctaSecondary: "Kenali Anggota Kami",
             stats: ["28 Anggota Aktif", "19 Program Kerja", "4 Divisi"],
             uptimeLabel: "Uptime Sistem",
-            uptimeValue: "99.9% Aktif",
+            uptimeValue: "78.8% Aktif",
         },
 
         about: {
@@ -31,7 +31,7 @@ export const translations = {
             subtitle:
                 "Himpunan Mahasiswa Prodi Informatika hadir sebagai wadah aspirasi, kolaborasi, dan pengembangan diri mahasiswa Informatika menuju generasi teknologi yang unggul.",
             stats: [
-                { value: 28, suffix: "", label: "Anggota Aktif" },
+                { value: 20, suffix: "", label: "Anggota Aktif" },
                 { value: 1, suffix: "", label: "Program Kerja Selesai" },
                 { value: 4, suffix: "", label: "Divisi Organisasi" },
             ],
@@ -81,7 +81,7 @@ export const translations = {
                 },
 
                 deminfo: {
-                    name: "Media dan Dokumentasi Informatika",
+                    name: "Media dan Informasi",
                     description:
                         "Bertanggung jawab mengelola informasi, publikasi, media sosial, serta dokumentasi kegiatan dan identitas visual HMPI.",
                 },
@@ -289,12 +289,12 @@ export const translations = {
 
             divisions: {
                 all: "Semua Divisi",
-                Hubeks: "hubungan eksternal & internal",
-                Psda: "Pengembangan Sumber Daya Akademik",
+                Hubeks: "hubungan eksternal",
+                Psda: "Pengembangan Sumber Daya Anggota",
                 Advas: "Administrasi & Advokasi",
                 Seketaris: "Sekretaris",
                 Bendahara: "Bendahara",
-                Deminfo: "Divisi Informasi & Komunikasi",
+                Deminfo: "Divisi Media dan Informasi",
                 Kahim: "Ketua Himpunan Mahasiswa Prodi Informatika",
             },
         },
@@ -617,12 +617,12 @@ export const translations = {
 
             divisions: {
                 all: "All Divisions",
-                Hubeks: "external and internal relations",
-                Psda: "Development of academic resources",
+                Hubeks: "external relations",
+                Psda: "Development of academic and member resources",
                 Advas: "Administration and Advocacy",
                 Seketaris: "secretary",
                 Bendahara: "treasurer",
-                Deminfo: "Information and Communication Division",
+                Deminfo: "Media and Information Division",
                 Kahim: "Association Chairperson",
             },
         },

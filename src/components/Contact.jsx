@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email Resmi",
-    value: "hmpi@kampusinformatika.ac.id",
+    value: "hmpiinformatikaupb@gmail.com",
   },
   {
     icon: MapPin,

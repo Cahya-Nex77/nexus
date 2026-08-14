@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Youtube, Mail, ArrowUp } from "lucide-react";
 import hmpiLogo from "../assets/hmpi-logo.jpg";
+import { BsTiktok } from "react-icons/bs";
 
 const quickLinks = [
   { label: "Beranda", href: "#beranda" },
@@ -13,8 +14,8 @@ const quickLinks = [
 
 const socials = [
   { icon: Instagram, href: "https://instagram.com/hmpi.informatika", label: "Instagram" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
-  { icon: Mail, href: "mailto:hmpi@kampusinformatika.ac.id", label: "Email" },
+  { icon: BsTiktok, href: "https://tiktok.com/@hmpi.up", label: "TikTok" },
+  { icon: Mail, href: "mailto:hmpiinformatikaupb@gmail.com", label: "Email" },
 ];
 
 const Footer = () => {

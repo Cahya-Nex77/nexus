@@ -25,6 +25,6 @@ export const programItems = [
   { id: 17, departmentKey: "hubeks" },
   { id: 18, departmentKey: "hubeks" },
 
-  // DEMINFO - Media dan Dokumentasi Informatika
+  // DEMINFO - Media dan Informasi
   { id: 19, departmentKey: "deminfo" },
-];
+];
