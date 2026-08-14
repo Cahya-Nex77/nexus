@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, MapPin, Instagram, Send, CheckCircle2, Youtube } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Instagram,
+  Send,
+  CheckCircle2,
+} from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import SectionHeading from "./ui/SectionHeading.jsx";
 
 const contactInfo = [
@@ -11,8 +18,13 @@ const contactInfo = [
   },
   {
     icon: MapPin,
+<<<<<<< HEAD
     label: "Alamat Sekretariat",
     value: "Gedung Fakultas Ilmu Komputer, Kampus Informatika, Lt. 2",
+=======
+    label: "Alamat Universitas Peradaban",
+    value: "Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276",
+>>>>>>> d1ef86d57dff6a22dd817c1b6c6de51c04ff2864
   },
   {
     icon: Instagram,
@@ -20,13 +32,23 @@ const contactInfo = [
     value: "@hmpi.informatika",
   },
   {
+<<<<<<< HEAD
     icon: Youtube,
     label: "YouTube",
     value: "HMPI Informatika Channel",
+=======
+    icon: FaTiktok,
+    label: "TikTok",
+    value: "hmpi.up",
+>>>>>>> d1ef86d57dff6a22dd817c1b6c6de51c04ff2864
   },
 ];
 
-const initialForm = { name: "", email: "", message: "" };
+const initialForm = {
+  name: "",
+  email: "",
+  message: "",
+};
 
 const Contact = () => {
   const [form, setForm] = useState(initialForm);
@@ -34,13 +56,20 @@ const Contact = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     if (!form.name || !form.email || !form.message) return;
+
     setSubmitted(true);
+
     setTimeout(() => {
       setSubmitted(false);
       setForm(initialForm);
@@ -58,7 +87,11 @@ const Contact = () => {
     >
       <motion.div
         animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        transition={{
+          duration: 16,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         className="absolute -bottom-40 -left-32 h-72 w-72 rounded-full bg-cyan-glow/10 blur-3xl"
       />
 
@@ -69,6 +102,7 @@ const Contact = () => {
       />
 
       <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-5">
+        {/* Informasi Kontak */}
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -78,6 +112,7 @@ const Contact = () => {
         >
           {contactInfo.map((info) => {
             const Icon = info.icon;
+
             return (
               <motion.div
                 key={info.label}
@@ -85,19 +120,27 @@ const Contact = () => {
                 className="card-surface flex items-start gap-4 p-5 transition-shadow duration-300 hover:shadow-glow-cyan"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-glow/20 to-cyan-glow/20">
-                  <Icon size={20} className="text-cyan-glow" />
+                  <Icon
+                    size={20}
+                    className="text-cyan-glow"
+                  />
                 </span>
+
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wide text-slate-soft">
                     {info.label}
                   </p>
-                  <p className="mt-1 text-sm text-white sm:text-base">{info.value}</p>
+
+                  <p className="mt-1 text-sm text-white sm:text-base">
+                    {info.value}
+                  </p>
                 </div>
               </motion.div>
             );
           })}
         </motion.div>
 
+        {/* Form Kontak */}
         <motion.form
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -106,10 +149,15 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="card-surface relative lg:col-span-3 flex flex-col gap-5 p-8"
         >
+          {/* Nama */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-sm font-medium text-slate-soft">
+            <label
+              htmlFor="name"
+              className="text-sm font-medium text-slate-soft"
+            >
               Nama Lengkap
             </label>
+
             <input
               id="name"
               name="name"
@@ -122,10 +170,15 @@ const Contact = () => {
             />
           </div>
 
+          {/* Email */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-sm font-medium text-slate-soft">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-slate-soft"
+            >
               Alamat Email
             </label>
+
             <input
               id="email"
               name="email"
@@ -138,10 +191,15 @@ const Contact = () => {
             />
           </div>
 
+          {/* Pesan */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="text-sm font-medium text-slate-soft">
+            <label
+              htmlFor="message"
+              className="text-sm font-medium text-slate-soft"
+            >
               Pesan
             </label>
+
             <textarea
               id="message"
               name="message"
@@ -154,6 +212,7 @@ const Contact = () => {
             />
           </div>
 
+          {/* Tombol Kirim */}
           <motion.button
             type="submit"
             whileHover={{ scale: 1.02 }}
@@ -164,6 +223,7 @@ const Contact = () => {
             <Send size={16} />
           </motion.button>
 
+          {/* Pesan Berhasil */}
           <AnimatePresence>
             {submitted && (
               <motion.div
@@ -173,6 +233,7 @@ const Contact = () => {
                 className="flex items-center gap-2 rounded-xl border border-cyan-glow/30 bg-cyan-glow/10 px-4 py-3 text-sm text-cyan-glow"
               >
                 <CheckCircle2 size={18} />
+
                 Pesan berhasil terkirim! Terima kasih sudah menghubungi HMPI.
               </motion.div>
             )}
