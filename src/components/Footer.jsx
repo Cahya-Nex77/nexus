@@ -12,9 +12,9 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/hmpi.up?igsh=MXdvcHVsNXVqbDU1Zg==", label: "Instagram" },
-  { icon: Youtube, href: "https://www.youtube.com/@hmpi.up", label: "YouTube" },
-  { icon: Mail, href: "mailto:hmpiinformatikaupb@gmail.com", label: "Email" },
+  { icon: Instagram, href: "https://instagram.com/hmpi.informatika", label: "Instagram" },
+  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: Mail, href: "mailto:hmpi@kampusinformatika.ac.id", label: "Email" },
 ];
 
 const Footer = () => {
@@ -82,12 +82,21 @@ const Footer = () => {
             Sekretariat
           </h4>
           <p className="mt-4 text-sm leading-relaxed text-slate-soft">
+<<<<<<< HEAD
+            HMPI Universitas Peradaban
+            <br />
+             Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276
+          </p>
+          <p className="mt-3 font-mono text-xs text-slate-soft">
+            hmpiinformatikaupb@gmail.com
+=======
             Gedung Fakultas Sains dan Teknologi
             <br />
             Gelempang, Pagojengan, Kec.Paguyangan, Kab.Brebes, Jawa Tengah 52276
           </p>
           <p className="mt-3 font-mono text-xs text-slate-soft">
             https://peradaban.ac.id
+>>>>>>> d1ef86d57dff6a22dd817c1b6c6de51c04ff2864
           </p>
         </div>
       </div>

@@ -66,7 +66,7 @@ const CustomCursor = () => {
           scale: isHovering ? 2.2 : 1,
         }}
         transition={{ scale: { duration: 0.35, ease: "easeOut" } }}
-        className="pointer-events-none fixed left-0 top-0 z-[90] h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-glow/50"
+        className="pointer-events-none fixed left-0 top-0 z-[9998] h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-glow/50"
       />
       <motion.div
         style={{ translateX: springX, translateY: springY }}
@@ -76,7 +76,7 @@ const CustomCursor = () => {
           backgroundColor: isHovering ? "#3B9DF8" : "#2563EB",
         }}
         transition={{ scale: { duration: 0.25, ease: "easeOut" } }}
-        className="pointer-events-none fixed left-0 top-0 z-[91] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-glow"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-glow"
       />
     </>
   );
