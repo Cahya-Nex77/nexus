@@ -82,12 +82,12 @@ const Footer = () => {
             Sekretariat
           </h4>
           <p className="mt-4 text-sm leading-relaxed text-slate-soft">
-            Gedung Fakultas Ilmu Komputer, Kampus Informatika
+            HMPI Universitas Peradaban
             <br />
-            Lantai 2, Ruang Organisasi Mahasiswa
+             Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276
           </p>
           <p className="mt-3 font-mono text-xs text-slate-soft">
-            hmpi@kampusinformatika.ac.id
+            hmpiinformatikaupb@gmail.com
           </p>
         </div>
       </div>

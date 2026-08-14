@@ -20,7 +20,8 @@ export const members = [
   { id: 16, name: "Sahrul Atiq Wibiyono", roleKey: "Bendahara", divisionKey: "Bendahara", photo: "/gallery/sahru.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
   { id: 17, name: "Naufal Fajar Adityo", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/naufal.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
   { id: 18, name: "Riza Farkhan Nulhakim", roleKey: "Staff Advas", divisionKey: "Advas", photo: "/gallery/riza.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
+  {id: 19, name: "Fadia Meiyana Insya", roleKey: "Ketus Himpunan", divisionKey: "Kahim", photo: "/gallery/eca.jpeg", instagram: "https://www.instagram.com/swetly_sya?igsh=Z3Z6MnN5NDIwNQ%3D%3D&utm_source=qr", linkedin: "https://linkedin.com/in/putri-rahmawati" },
 ];
 
 
-export const divisionKeyOrder = ["all", "Seketaris", "Hubeks", "Deminfo", "Bendahara", "Advas", "Psda"];
+export const divisionKeyOrder = ["all", "Seketaris", "Hubeks", "Deminfo", "Bendahara", "Advas", "Psda" , "Kahim", ];
