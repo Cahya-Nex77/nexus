@@ -12,9 +12,9 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/hmpi.up?igsh=MXdvcHVsNXVqbDU1Zg==", label: "Instagram" },
-  { icon: Youtube, href: "https://www.youtube.com/@hmpi.up", label: "YouTube" },
-  { icon: Mail, href: "mailto:hmpiinformatikaupb@gmail.com", label: "Email" },
+  { icon: Instagram, href: "https://instagram.com/hmpi.informatika", label: "Instagram" },
+  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: Mail, href: "mailto:hmpi@kampusinformatika.ac.id", label: "Email" },
 ];
 
 const Footer = () => {

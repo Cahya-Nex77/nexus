@@ -1,6 +1,6 @@
-const unsplashFace = (id) => {
- return `https://images.unsplash.com/photo-${id}?w=400&h=400&fit=crop&crop=faces&q=80`;
-};
+const unsplashFace = (id) =>
+  `https://images.unsplash.com/photo-${id}?w=400&h=400&fit=crop&crop=faces&q=80`;
+
 export const members = [
   { id: 1, name: "Arjuna Faisal Ramadhani", roleKey: "Staff Psda", divisionKey: "Deminfo", photo: "/gallery/arjun.jpeg", instagram: "https://www.instagram.com/_jdnn55555?igsh=MWs3eHhtdjBnZjcwdw==", },
   { id: 2, name: "Kartika Dhista Naya", roleKey: "Seketaris", divisionKey: "Seketaris", photo: "/gallery/dhista.jpeg", instagram: "https://www.instagram.com/dhist4a.n?igsh=dnZvbGUzaGo3NWZ3",},
