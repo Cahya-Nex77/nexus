@@ -18,9 +18,9 @@ export const translations = {
                 "HMPI (Himpunan Mahasiswa Prodi Informatika) adalah wadah pengembangan potensi, kreativitas, dan solidaritas mahasiswa dalam bidang teknologi dan informatika.",
             ctaPrimary: "Jelajahi Program Kerja",
             ctaSecondary: "Kenali Anggota Kami",
-            stats: ["28+ Anggota Aktif", "12 Program Kerja", "7 Divisi"],
+            stats: ["28 Anggota Aktif", "20 Program Kerja", "4 Divisi"],
             uptimeLabel: "Uptime Sistem",
-            uptimeValue: "99.9% Aktif",
+            uptimeValue: "70% Aktif",
         },
         about: {
             eyebrow: "Tentang Kami",
@@ -28,9 +28,9 @@ export const translations = {
             subtitle:
                 "Himpunan Mahasiswa Prodi Informatika hadir sebagai wadah aspirasi, kolaborasi, dan pengembangan diri mahasiswa Informatika menuju generasi teknologi yang unggul.",
             stats: [
-                { value: 18, suffix: "+", label: "Anggota Aktif" },
-                { value: 12, suffix: "", label: "Program Kerja Selesai" },
-                { value: 7, suffix: "", label: "Divisi Organisasi" },
+                { value: 28, suffix: "", label: "Anggota Aktif" },
+                { value: 1, suffix: "", label: "Program Kerja Selesai" },
+                { value: 4, suffix: "", label: "Divisi Organisasi" },
             ],
             visionTitle: "Visi",
             visionText:
@@ -48,67 +48,155 @@ export const translations = {
             eyebrow: "Program Kerja",
             title: "Kegiatan yang Kami Jalankan",
             subtitle:
-                "Dari workshop teknis hingga pengabdian masyarakat, setiap program kerja HMPI dirancang untuk menumbuhkan kompetensi dan kepedulian mahasiswa Informatika.",
-            categories: {
+                "20 program kerja HMPI yang tersebar di 4 departemen, dirancang untuk menumbuhkan kompetensi, kekeluargaan, dan kepedulian mahasiswa Informatika.",
+            departments: {
                 all: "Semua",
-                workshop: "Workshop",
-                competition: "Kompetisi",
-                seminar: "Seminar",
-                service: "Pengabdian",
+                psda: "PSDA",
+                advas: "ADVAS",
+                hubeks: "HUBEKS",
+                deminfo: "DEMINFO",
             },
-            tags: {
-                popular: "Populer",
-                featured: "Unggulan",
-                recurring: "Rutin",
+            departmentDescriptions: {
+                psda: {
+                    name: "Pengembangan Sumber Daya Anggota",
+                    description:
+                        "Berfokus pada pengembangan potensi, kompetensi, dan kualitas anggota melalui kegiatan pembinaan, pelatihan, serta pengembangan organisasi.",
+                },
+                advas: {
+                    name: "Advokasi dan Aspirasi",
+                    description:
+                        "Menjadi wadah penyampaian aspirasi mahasiswa serta membantu mengawal kebutuhan, hak, dan kepentingan mahasiswa Informatika.",
+                },
+                hubeks: {
+                    name: "Hubungan Eksternal",
+                    description:
+                        "Bertugas membangun dan menjaga hubungan serta kerja sama HMPI dengan pihak eksternal, seperti organisasi mahasiswa, alumni, institusi, dan mitra lainnya.",
+                },
+                deminfo: {
+                    name: "Media dan Dokumentasi Informatika",
+                    description:
+                        "Bertanggung jawab mengelola informasi, publikasi, media sosial, serta dokumentasi kegiatan dan identitas visual HMPI.",
+                },
             },
             items: {
                 1: {
-                    title: "Coding Bootcamp: Web Development Fundamentals",
+                    title: "Upgrading",
                     description:
-                        "Pelatihan intensif 4 minggu untuk mahasiswa baru mempelajari HTML, CSS, JavaScript, dan dasar framework modern.",
-                    date: "Agustus 2025",
+                        "Pembahasan program kerja dan pelatihan peningkatan kapasitas serta kompetensi kepengurusan HMPI di awal periode.",
+                    date: "Juni 2026",
                 },
                 2: {
-                    title: "HMPI Hackathon: Code for Campus",
+                     title: "SAPA CAMABA",
                     description:
-                        "Kompetisi pengembangan aplikasi 24 jam untuk menciptakan solusi digital bagi permasalahan seputar kehidupan kampus.",
-                    date: "September 2025",
+                        "Kegiatan penyambutan calon mahasiswa baru Program Studi Informatika.",
+                    date: "September 2026",
                 },
                 3: {
-                    title: "Seminar IPTEK: AI & Masa Depan Industri",
+                    title: "LKMM-TPD",
                     description:
-                        "Menghadirkan praktisi industri untuk membahas perkembangan kecerdasan buatan dan peluang karier bagi lulusan Informatika.",
-                    date: "Oktober 2025",
+                        "Latihan Keterampilan Manajemen Mahasiswa Tingkat Pra Dasar untuk membentuk jiwa kepemimpinan anggota baru.",
+                    date: "November 2026",
                 },
                 4: {
-                    title: "Desa Digital: Pengabdian Masyarakat",
+                    title: "FUN TI",
                     description:
-                        "Program literasi digital dan pendampingan UMKM desa binaan dalam memanfaatkan teknologi untuk pemasaran produk.",
-                    date: "November 2025",
+                        "Kegiatan olahraga bersama sebagai persiapan menghadapi PORMA yang diikuti oleh seluruh mahasiswa Informatika.",
+                    date: "Fleksibel",
                 },
                 5: {
-                    title: "Workshop UI/UX Design Sprint",
+                    title: "JAR-IT",
                     description:
-                        "Sesi praktik merancang antarmuka aplikasi dari riset pengguna hingga prototipe interaktif menggunakan Figma.",
-                    date: "November 2025",
+                        "Kegiatan berbagi dan pembelajaran untuk membantu mahasiswa Informatika memahami materi yang belum dikuasai. Pemateri dapat berasal dari mahasiswa tingkat atas yang memiliki kompetensi di bidang tertentu, dengan peserta dari pengurus HMPI maupun seluruh mahasiswa Informatika."
                 },
                 6: {
-                    title: "Competitive Programming Training Camp",
+                    title: "IT Connect",
                     description:
-                        "Pelatihan rutin pemecahan masalah algoritmik untuk mempersiapkan anggota menghadapi ICPC dan kompetisi nasional.",
-                    date: "Berkelanjutan",
+                        "Program khusus mahasiswa baru sebagai wadah pengenalan dan pembelajaran organisasi melalui sistem magang di HMPI. Peserta mendapatkan pengalaman berorganisasi dan bekal untuk terlibat dalam kepengurusan HMPI.",
+                    date: "Januari 2027",
                 },
                 7: {
-                    title: "Seminar Karier: Dunia Kerja Tech Industry",
+                    title: "Kelas Organisasi",
                     description:
-                        "Berbagi pengalaman dari alumni yang berkarier sebagai software engineer, data analyst, dan product manager.",
-                    date: "Desember 2025",
+                        "Pelatihan dasar keorganisasian dan manajemen kegiatan bagi anggota HMPI.",
+                    date: "Menyesuaikan Jadwal",
                 },
                 8: {
-                    title: "Bakti Sosial & Edukasi Teknologi Anak",
+                    title: "Workshop",
                     description:
-                        "Kegiatan edukasi pengenalan dasar komputer dan internet sehat bagi anak-anak di panti asuhan mitra HMPI.",
-                    date: "Januari 2026",
+                        "Pelatihan keterampilan teknis untuk menunjang kompetensi anggota HMPI di bidang IT. Salah satu dari dua kegiatan (Workshop/Webinar Nasional) yang akan dilaksanakan sesuai kebutuhan.",
+                    date: "April 2027",
+                },
+                9: {
+                    title: "Webinar Nasional",
+                    description:
+                        "Webinar berskala nasional menghadirkan pembicara ahli seputar perkembangan dunia teknologi. Salah satu dari dua kegiatan (Workshop/Webinar Nasional) yang akan dilaksanakan sesuai kebutuhan.",
+                    date: "April 2027",
+                },
+                10: {
+                    title: "Liga TI (MLBB)",
+                    description:
+                        "Turnamen Mobile Legends: Bang Bang antar mahasiswa Informatika untuk mempererat kebersamaan.",
+                    date: "April 2027",
+                },
+                11: {
+                    title: "MUBES (Musyawarah Besar)",
+                    description:
+                        "Forum musyawarah tertinggi HMPI untuk evaluasi kepengurusan dan regenerasi organisasi.",
+                    date: "Menyesuaikan Jadwal",
+                },
+                12: {
+                    title: "Kotak Aspirasi",
+                    description:
+                        "Wadah rutin penyampaian aspirasi, kritik, dan masukan dari mahasiswa Informatika.",
+                    date: "Berkelanjutan",
+                },
+                13: {
+                    title: "Kotak Aspirasi",
+                    description:
+                        "Wadah rutin penyampaian aspirasi, kritik, dan masukan dari mahasiswa Informatika.",
+                    date: "Berkelanjutan",
+                },
+                14: {
+                     title: "Seminar Hak dan Kewajiban",
+                    description:
+                        "Edukasi mengenai hak dan kewajiban mahasiswa dalam lingkungan akademik dan kemahasiswaan.",
+                    date: "November 2026",
+                },
+                15: {
+                    title: "Sosial Edukasi",
+                    description:
+                        "Kegiatan edukasi teknologi bagi masyarakat sekitar kampus, baik di lingkungan sekolah maupun masyarakat umum.",
+                    date: "Januari 2027",
+                },
+                16: {
+                    title: "Promosi IT Lab",
+                    description:
+                        "Sosialisasi dan promosi layanan IT Lab kepada mahasiswa dan masyarakat umum, termasuk pembuatan PDH serta layanan perakitan dan servis PC.",
+                    date: "Berkelanjutan",
+                },
+                17: {
+                    title: "Informatika Visit",
+                    description:
+                        "Kunjungan edukatif ke universitas lain dalam lingkup HIMA Informatika untuk memperluas wawasan, berbagi pengalaman, dan membangun relasi antarorganisasi.",
+                    date: "Menyesuaikan jadwal",
+                },
+                18: {
+                    title: "FNG (Family Night Gathering)",
+                    description:
+                        "Malam kebersamaan untuk mempererat rasa kekeluargaan seluruh anggota HMPI.",
+                    date: "Menyesuaikan Jadwal",
+                },
+                19: {
+                    title: "Foto dan Video Profil",
+                    description:
+                        "Produksi dokumentasi visual profil HMPI yang memperkenalkan anggota kepengurusan serta mendokumentasikan berbagai kegiatan organisasi.",
+                    date: "November 2026",
+                },
+                20: {
+                    title: "Titik Koma",
+                    description:
+                        "Media publikasi rutin yang menyajikan informasi dan materi seputar Informatika serta berbagai topik terkait teknologi dan dunia IT.",
+                    date: "Berkelanjutan",
                 },
             },
         },
@@ -116,35 +204,35 @@ export const translations = {
             eyebrow: "Dokumentasi",
             title: "Momen Kegiatan HMPI",
             subtitle:
-                "Rangkaian dokumentasi kegiatan yang menjadi jejak langkah kolaborasi dan karya anggota HMPI sepanjang periode kepengurusan.",
+                "Kumpulan dokumentasi kegiatan HMPI yang mengabadikan momen, kebersamaan, dan perjalanan organisasi.",
             items: {
                 1: {
-                    title: "Coding Bootcamp Batch 3",
-                    caption: "Peserta antusias belajar dasar pemrograman web bersama mentor.",
+                    title: "(Kolaborasi) Forum Daerah 1 PERMIKOMNAS Jateng",
+                    caption: "Pembahasan arah strategis dan rencana pengembangan Daerah 1.",
                 },
                 2: {
-                    title: "HMPI Hackathon 2025",
-                    caption: "Tim mahasiswa berkompetisi membangun solusi digital dalam 24 jam.",
+                    title: "(Kolaborasi) Informatika Visit bersama BEM-FST",
+                    caption: "Kegiatan kunjungan bersama BEM FST untuk memperluas wawasan, bertukar pengalaman, dan memperkuat hubungan antarorganisasi mahasiswa..",
                 },
                 3: {
-                    title: "Seminar IPTEK Nasional",
-                    caption: "Diskusi bersama praktisi industri teknologi terkemuka.",
+                    title: "Musyawarah Besar periode 2025-2026",
+                    caption: "Forum tertinggi HMPI untuk membahas laporan Pertanggungjawaban selama 1 periode dan pemilihan Ketua Himpunan baru.",
                 },
                 4: {
-                    title: "Rapat Kerja Pengurus",
-                    caption: "Penyusunan program kerja tahunan bersama seluruh divisi.",
+                    title: "Sosial Edukasi (2) di SMK Muhammaddiyah Paguyangan",
+                    caption: "Kegiatan edukasi yang membahas tentang bahaya phishing serta cara mengenali dan menghindarinya.",
                 },
                 5: {
-                    title: "Desa Digital Volunteer",
-                    caption: "Pendampingan UMKM desa dalam pemanfaatan teknologi digital.",
+                    title: "Sosial Edukasi (1) di SMK 1 Muhammaddiyah Bumiayu",
+                    caption: "Kegiatan edukasi yang membahas tentang bahaya phishing serta cara mengenali dan menghindarinya.",
                 },
                 6: {
-                    title: "Workshop UI/UX Design",
-                    caption: "Latihan merancang produk digital dari riset hingga prototipe.",
+                    title: "Upgrading Organization",
+                    caption: "Pembahasan program kerja dan pelatihan peningkatan kapasitas serta kompetensi kepengurusan HMPI di awal periode.",
                 },
                 7: {
-                    title: "Malam Keakraban Anggota",
-                    caption: "Membangun kekeluargaan antar anggota dari berbagai angkatan.",
+                    title: "Webinar Nasional",
+                    caption: "Webinar edukasi teknologi yang membekali mahasiswa Informatika dengan pemahaman dasar Git dan GitHub untuk mendukung pengelolaan kode dan kolaborasi dalam proyek.",
                 },
             },
         },
@@ -168,12 +256,12 @@ export const translations = {
             },
             divisions: {
                 all: "Semua Divisi",
-                Hubeks: "hubungan eksternal & internal",
-                Psda: "Pengembangan Sumber Daya Akademik",
-                Advas: "Administrasi & Advokasi",
-                Seketaris: "Sekretaris",
+                Hubeks: "Hubungan Eksternal",
+                Psda: "Pengembangan Sumber Daya Anggota",
+                Advas: "Advokasi dan Aspirasi",
+                Sekretaris: "Sekretaris",
                 Bendahara: "Bendahara",
-                Deminfo: "Divisi Informasi & Komunikasi",
+                Deminfo: "Media dan Informasi",
             },
         },
     },
@@ -189,16 +277,17 @@ export const translations = {
         joinButton: "Join HMPI",
         hero: {
             badge: "Informatics Study Program Student Association",
-            headingPart1: "Inspiring, ",
-            headingHighlight: "Innovative",
-            headingPart2: ", and Impactful in the World of Informatics",
+            headingPart1: "Solid, ",
+            headingHighlight: "Progressive",
+            headingPart2:
+                ", and Innovative in Building the Next Generation of Informatics",
             paragraph:
-                "HMPI is a home for Informatics students to grow through research, projects, and collaboration. We connect classroom theory with real-world tech experience through relevant and sustainable programs.",
+                "HMPI (Informatics Student Association) is a platform for developing students' potential, creativity, and solidarity in the fields of technology and informatics.",
             ctaPrimary: "Explore Our Programs",
             ctaSecondary: "Meet Our Members",
-            stats: ["25+ Active Members", "12 Programs", "7 Divisions"],
+            stats: ["28 Active Members", "20 Programs", "4 Divisions"],
             uptimeLabel: "System Uptime",
-            uptimeValue: "99.9% Active",
+            uptimeValue: "70% Active",
         },
         about: {
             eyebrow: "About Us",
@@ -206,122 +295,190 @@ export const translations = {
             subtitle:
                 "The Informatics Study Program Student Association exists as a platform for aspiration, collaboration, and self-development for Informatics students toward becoming an outstanding generation of technology.",
             stats: [
-                { value: 25, suffix: "+", label: "Active Members" },
-                { value: 12, suffix: "", label: "Completed Programs" },
-                { value: 7, suffix: "", label: "Organizational Divisions" },
+                { value: 28, suffix: "", label: "Active Members" },
+                { value: 1, suffix: "", label: "Completed Programs" },
+                { value: 4, suffix: "", label: "Organizational Divisions" },
             ],
             visionTitle: "Vision",
             visionText:
-                "To become an outstanding student association in producing competent, collaborative, and principled Informatics talents, and to play an active role in advancing technology at both campus and national levels.",
+                "To establish a solid, progressive, and innovative Informatics Student Association through collaboration and the development of members' potential.",
             missionTitle: "Mission",
             missions: [
-                "Building a collaborative and inclusive Informatics learning ecosystem.",
-                "Driving technology research and innovation that benefits society.",
-                "Bridging students with industry through real-world programs.",
-                "Developing leadership character and soft skills of Informatics students.",
+                "Strengthen solidarity and foster a sense of togetherness among members.",
+                "Develop students' academic and non-academic skills and potential.",
+                "Create active, creative, and impactful programs.",
+                "Establish effective communication and collaboration both within and outside the association.",
+                "Build an organization that is responsive, adaptive, and committed to integrity in addressing technological developments and students' needs.",
             ],
         },
         programs: {
             eyebrow: "Programs",
             title: "Activities We Run",
             subtitle:
-                "From technical workshops to community service, every HMPI program is designed to build competence and social awareness among Informatics students.",
-            categories: {
+                "20 HMPI programs spread across 4 departments, designed to build competence, camaraderie, and social awareness among Informatics students.",
+            departments: {
                 all: "All",
-                workshop: "Workshop",
-                competition: "Competition",
-                seminar: "Seminar",
-                service: "Community Service",
+                psda: "PSDA",
+                advas: "ADVAS",
+                hubeks: "HUBEKS",
+                deminfo: "DEMINFO",
             },
-            tags: {
-                popular: "Popular",
-                featured: "Featured",
-                recurring: "Regular",
-            },
-            items: {
-                1: {
-                    title: "Coding Bootcamp: Web Development Fundamentals",
-                    description:
-                        "An intensive 4-week training for new students to learn HTML, CSS, JavaScript, and the basics of modern frameworks.",
-                    date: "August 2025",
-                },
-                2: {
-                    title: "HMPI Hackathon: Code for Campus",
-                    description:
-                        "A 24-hour app development competition to create digital solutions for everyday campus life challenges.",
-                    date: "September 2025",
-                },
-                3: {
-                    title: "Tech Talk: AI & the Future of Industry",
-                    description:
-                        "Bringing in industry practitioners to discuss developments in artificial intelligence and career opportunities for Informatics graduates.",
-                    date: "October 2025",
-                },
-                4: {
-                    title: "Digital Village: Community Service Program",
-                    description:
-                        "A digital literacy and mentorship program helping partner villages' small businesses use technology for product marketing.",
-                    date: "November 2025",
-                },
-                5: {
-                    title: "UI/UX Design Sprint Workshop",
-                    description:
-                        "A hands-on session on designing app interfaces, from user research to interactive prototypes using Figma.",
-                    date: "November 2025",
-                },
-                6: {
-                    title: "Competitive Programming Training Camp",
-                    description:
-                        "Regular algorithmic problem-solving training to prepare members for ICPC and national competitions.",
-                    date: "Ongoing",
-                },
-                7: {
-                    title: "Career Talk: Life in the Tech Industry",
-                    description:
-                        "Alumni share their experience working as software engineers, data analysts, and product managers.",
-                    date: "December 2025",
-                },
-                8: {
-                    title: "Community Outreach & Tech Education for Kids",
-                    description:
-                        "An educational activity introducing basic computer skills and safe internet use to children at HMPI's partner orphanage.",
-                    date: "January 2026",
-                },
-            },
+           items: {
+               1: {
+                  title: "Upgrading",
+                  description:
+                      "Discussion of the work program and capacity and competence building training for HMPI management at the beginning of the term.",
+                  date: "June 2026",
+               },
+               2: {
+                  title: "SAPA CAMABA",
+                  description:
+                      "A welcoming event for prospective new students of the Informatics Study Program.",
+                  date: "September 2026",
+               },
+               3: {
+                  title: "LKMM-TPD",
+                  description:
+                      "Pre-basic student management and leadership training designed to develop leadership skills among new members.",
+                  date: "November 2026",
+               },
+               4: {
+                  title: "FUN IT",
+                  description:
+                      "A sports activity held as preparation for PORMA, involving all Informatics students.",
+                  date: "Flexible",
+               },
+               5: {
+                  title: "JAR-IT",
+                  description:
+                      "A learning and knowledge-sharing activity designed to help Informatics students understand topics they have not yet mastered. The sessions may be led by senior students with expertise in specific fields, with participants consisting of both HMPI board members and all Informatics students.",
+                  date: "Schedule to be determined",
+               },
+               6: {
+                  title: "IT Connect",
+                  description:
+                      "A program for new students to learn and experience organizational life through an internship system at HMPI. Participants gain organizational experience and preparation to become involved in HMPI management.",
+                  date: "January 2027",
+               },
+               7: {
+                  title: "Organization Class",
+                  description:
+                      "Basic training in organizational skills and activity management for HMPI members.",
+                  date: "Schedule to be determined",
+               },
+               8: {
+                  title: "Workshop",
+                  description:
+                      "Technical skills training to strengthen HMPI members' competence in IT. One of two activities (Workshop/National Webinar) that will be held depending on need.",
+                  date: "April 2027",
+               },
+               9: {
+                  title: "National Webinar",
+                  description:
+                      "A nationwide webinar featuring expert speakers on the latest developments in technology. One of two activities (Workshop/National Webinar) that will be held depending on need.",
+                  date: "April 2027",
+               },
+              10: {
+                  title: "IT League (MLBB)",
+                  description:
+                      "A Mobile Legends: Bang Bang tournament among Informatics students to strengthen camaraderie.",
+                  date: "April 2027",
+               },
+              11: {
+                  title: "MUBES (General Assembly)",
+                  description:
+                      "HMPI's highest deliberative forum for evaluating the current management and facilitating organizational regeneration.",
+                  date: "Schedule to be determined",
+               },
+              12: {
+                  title: "Aspiration Box",
+                  description:
+                      "An ongoing platform for Informatics students to submit their aspirations, feedback, and suggestions.",
+                  date: "Ongoing",
+               },
+              13: {
+                  title: "Aspiration Box",
+                  description:
+                      "An ongoing platform for Informatics students to submit their aspirations, feedback, and suggestions.",
+                  date: "Ongoing",
+               },
+              14: {
+                  title: "Rights and Duties Seminar",
+                  description:
+                      "An educational session on students' rights and duties within the academic and student environment.",
+                  date: "November 2026",
+               },
+              15: {
+                  title: "Social Education",
+                  description:
+                      "Technology education activities for communities around the campus, including schools and the general public.",
+                  date: "January 2027",
+               },
+              16: {
+                  title: "IT Lab Promotion",
+                  description:
+                      "Promotion and introduction of IT Lab services to students and the general public, including PDH production, PC assembly, and repair services.",
+                  date: "Ongoing",
+               },
+              17: {
+                  title: "Informatics Visit",
+                  description:
+                      "An educational visit to other universities within the Informatics Student Association community to broaden knowledge, exchange experiences, and build relationships between organizations.",
+                  date: "Schedule to be determined",
+               },
+              18: {
+                  title: "FNG (Family Night Gathering)",
+                  description:
+                      "A night of togetherness to strengthen the sense of family among all HMPI members.",
+                  date: "Schedule to be determined",
+               },
+              19: {
+                  title: "Photo and Video Profile",
+                  description:
+                      "Production of visual content for HMPI's profile, introducing its members and documenting various organizational activities.",
+                  date: "November 2026",
+               },
+              20: {
+                  title: "Titik Koma",
+                  description:
+                      "A regular publication platform that shares information and content about Informatics, technology, and various topics related to the IT field.",
+                  date: "Ongoing",
+               },
+           },
         },
         gallery: {
             eyebrow: "Documentation",
             title: "Moments from HMPI",
             subtitle:
-                "A collection of activity documentation tracing the collaboration and work of HMPI members throughout the term.",
+                "A collection of HMPI activity documentation capturing moments, togetherness, and the organization's journey.",
             items: {
                 1: {
-                    title: "Coding Bootcamp Batch 3",
-                    caption: "Enthusiastic participants learning web programming basics with mentors.",
+                    title: "(Collaboration) PERMIKOMNAS Central Java Region 1 Forum",
+                    caption: "Discussion on strategic directions and development plans for Region 1.",
                 },
                 2: {
-                    title: "HMPI Hackathon 2025",
-                    caption: "Student teams competing to build digital solutions in 24 hours.",
+                    title: "(Collaboration) Informatics Visit with BEM-FST",
+                    caption: "A visit with BEM FST to broaden knowledge, exchange experiences, and strengthen relationships between student organizations.",
                 },
                 3: {
-                    title: "National Tech Seminar",
-                    caption: "Discussion with leading technology industry practitioners.",
+                    title: "General Assembly for the 2025-2026 Term",
+                    caption: "HMPI's highest forum to discuss the accountability report for the one-year term and elect a new Chairperson.",
                 },
                 4: {
-                    title: "Board Work Meeting",
-                    caption: "Drafting the annual work program together with all divisions.",
+                    title: "Social Education (2) at SMK Muhammadiyah Paguyangan",
+                    caption: "An educational activity discussing the dangers of phishing and how to recognize and avoid it.",
                 },
                 5: {
-                    title: "Digital Village Volunteering",
-                    caption: "Mentoring village small businesses on using digital technology.",
+                    title: "Social Education (1) at SMK 1 Muhammadiyah Bumiayu",
+                    caption: "An educational activity discussing the dangers of phishing and how to recognize and avoid it.",
                 },
                 6: {
-                    title: "UI/UX Design Workshop",
-                    caption: "Practicing digital product design from research to prototype.",
+                    title: "Organizational Upgrading",
+                    caption: "Discussion of the work program and capacity and competence building training for HMPI management at the beginning of the term.",
                 },
                 7: {
-                    title: "Members' Bonding Night",
-                    caption: "Building camaraderie among members from different batches.",
+                    title: "National Webinar",
+                    caption: "Webinar edukasi teknologi yang membekali mahasiswa Informatika dengan pemahaman dasar Git dan GitHub untuk mendukung pengelolaan kode dan kolaborasi dalam proyek.",
                 },
             },
         },
@@ -345,12 +502,12 @@ export const translations = {
             },
             divisions: {
                 all: "All Divisions",
-                Hubeks: "Board of Directors",
-                Psda: "Education & Academic Affairs",
-                Advas: "Research & Technology",
-                Seketaris: "Public Relations",
-                Bendahara: "Talent & Interest",
-                Deminfo: "Entrepreneurship",
+                Hubeks: "External Relations",
+                Psda: "Member Development",
+                Advas: "Advocacy and Aspirations",
+                Sekretaris: "Secretary",
+                Bendahara: "Treasurer",
+                Deminfo: "Media and Information",
             },
         },
     },
