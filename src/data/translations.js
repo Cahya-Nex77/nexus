@@ -620,7 +620,7 @@ export const translations = {
                 Bendahara: "treasurer",
                 Deminfo: "Media and Information Division",
                 Kahim: "Association Chairperson",
-            }, git push origin
+            },
         },
 
         joinModal: {
