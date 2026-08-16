@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@hmpi.informatika",
+    value: "@hmpi.up",
   },
   {
     icon: TikTokIcon,

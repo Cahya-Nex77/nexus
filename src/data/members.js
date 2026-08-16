@@ -3,13 +3,13 @@ const unsplashFace = (id) =>
 
 export const members = [
   { id: 1, name: "Arjuna Faisal Ramadhani", roleKey: "Staff Psda", divisionKey: "Deminfo", photo: "/gallery/arjun.jpeg", instagram: "https://www.instagram.com/_jdnn55555?igsh=MWs3eHhtdjBnZjcwdw==", },
-  { id: 2, name: "Kartika Dhista Naya", roleKey: "Seketaris", divisionKey: "Seketaris", photo: "/gallery/dhista.jpeg", instagram: "https://www.instagram.com/dhist4a.n?igsh=dnZvbGUzaGo3NWZ3",},
+  { id: 2, name: "Kartika Dhista Naya", roleKey: "Seketaris", divisionKey: "Seketaris", photo: "/gallery/dhista.jpeg", instagram: "https://www.instagram.com/dhist4a.n?igsh=dnZvbGUzaGo3NWZ3", },
   { id: 3, name: "Untung Cahyadi", roleKey: "Staff Hubeks", divisionKey: "Hubeks", photo: "/gallery/05-07-07.jpeg", instagram: "https://www.instagram.com/cahya_050707?igsh=MWJvY2RveTI2Y2Q5bQ==", },
   { id: 4, name: "Alinda Restu Desiyana", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/alin.jpeg", instagram: "https://www.instagram.com/yeyeluve?igsh=MW1rOHY3bmIzbDFyMw==", },
   { id: 5, name: "Arsyidan Sahal Syarbini", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/sahal.jpeg", instagram: "https://www.instagram.com/sahal.wira", },
   { id: 6, name: "David Adriyanto", roleKey: "Staff Hubeks", divisionKey: "Hubeks", photo: "/gallery/david.jpeg", instagram: "https://www.instagram.com/adriyanto.21?igsh=Z2l5enRqczBhcDYy:", },
-  { id: 7, name: "Diasza Lania Riskia Tsani", roleKey: "Staff Hubeks", divisionKey: "Hubeks", photo: "/gallery/diaz.jpeg", instagram: "https://www.instagram.com/_diaszaaa?igsh=dm83d3M4a2gxMjBz",},
-  { id: 8, name: "Farkhan Maulana", roleKey: "Staff Deminfo", divisionKey: "Deminfo", photo:"/gallery/farkhan.jpeg", instagram: "https://instagram.com/amanda.kirana", linkedin: "https://linkedin.com/in/amanda-kirana" },
+  { id: 7, name: "Diasza Lania Riskia Tsani", roleKey: "Staff Hubeks", divisionKey: "Hubeks", photo: "/gallery/diaz.jpeg", instagram: "https://www.instagram.com/_diaszaaa?igsh=dm83d3M4a2gxMjBz", },
+  { id: 8, name: "Farkhan Maulana", roleKey: "Staff Deminfo", divisionKey: "Deminfo", photo: "/gallery/farkhan.jpeg", instagram: "https://instagram.com/amanda.kirana", linkedin: "https://linkedin.com/in/amanda-kirana" },
   { id: 9, name: "Iqbal Habibie Arsyidan Abidin", roleKey: "Staff Deminfo", divisionKey: "Deminfo", photo: "/gallery/iqbal.jpeg", instagram: "https://instagram.com/reza.firmansyah", linkedin: "https://linkedin.com/in/reza-firmansyah" },
   { id: 10, name: "M Roisul Umam", roleKey: "Seketaris", divisionKey: "Seketaris", photo: "/gallery/umam.jpeg", instagram: "https://instagram.com/intan.permata", linkedin: "https://linkedin.com/in/intan-permata" },
   { id: 11, name: "M Ferdinan Sidiq", roleKey: "Staff Deminfo", divisionKey: "Deminfo", photo: "/gallery/ferdi.jpeg", instagram: "https://instagram.com/yusuf.hakim", linkedin: "https://linkedin.com/in/yusuf-hakim" },
@@ -20,8 +20,9 @@ export const members = [
   { id: 16, name: "Sahrul Atiq Wibiyono", roleKey: "Bendahara", divisionKey: "Bendahara", photo: "/gallery/sahru.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
   { id: 17, name: "Naufal Fajar Adityo", roleKey: "Staff Psda", divisionKey: "Psda", photo: "/gallery/naufal.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
   { id: 18, name: "Riza Farkhan Nulhakim", roleKey: "Staff Advas", divisionKey: "Advas", photo: "/gallery/riza.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
-  {id: 19, name: "Fadia Meiyana Insya", roleKey: "Ketus Himpunan", divisionKey: "Kahim", photo: "/gallery/eca.jpeg", instagram: "https://www.instagram.com/swetly_sya?igsh=Z3Z6MnN5NDIwNQ%3D%3D&utm_source=qr", linkedin: "https://linkedin.com/in/putri-rahmawati" },
+  { id: 19, name: "Fadia Meiyana Insya", roleKey: "Ketus Himpunan", divisionKey: "Kahim", photo: "/gallery/eca.jpeg", instagram: "https://www.instagram.com/swetly_sya?igsh=Z3Z6MnN5NDIwNQ%3D%3D&utm_source=qr", linkedin: "https://linkedin.com/in/putri-rahmawati" },
+  { id: 20, name: "Ridho Harapa Wijaya", roleKey: "Staff Advas", divisionKey: "Advas", photo: "/gallery/rido.jpeg", instagram: "https://instagram.com/putri.rahmawati", linkedin: "https://linkedin.com/in/putri-rahmawati" },
 ];
 
 
-export const divisionKeyOrder = ["all", "Seketaris", "Hubeks", "Deminfo", "Bendahara", "Advas", "Psda" , "Kahim", ];
+export const divisionKeyOrder = ["all", "Seketaris", "Hubeks", "Deminfo", "Bendahara", "Advas", "Psda", "Kahim",];
