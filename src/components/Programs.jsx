@@ -84,8 +84,8 @@ const Programs = () => {
     activeDepartment === "all"
       ? programItems
       : programItems.filter(
-          (program) => program.departmentKey === activeDepartment
-        );
+        (program) => program.departmentKey === activeDepartment
+      );
 
   return (
     <motion.section
@@ -121,11 +121,10 @@ const Programs = () => {
                 damping: 20,
               }}
               style={{ transformStyle: "preserve-3d" }}
-              className={`relative rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${
-                isActive
+              className={`relative rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${isActive
                   ? "text-white"
                   : "text-slate-soft hover:text-white"
-              }`}
+                }`}
             >
               {isActive && (
                 <span

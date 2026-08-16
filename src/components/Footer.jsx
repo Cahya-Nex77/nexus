@@ -13,7 +13,7 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://instagram.com/hmpi.informatika", label: "Instagram" },
+  { icon: Instagram, href: "https://instagram.com/hmpi.up", label: "Instagram" },
   { icon: BsTiktok, href: "https://tiktok.com/@hmpi.up", label: "TikTok" },
   { icon: Mail, href: "mailto:hmpiinformatikaupb@gmail.com", label: "Email" },
 ];
@@ -29,9 +29,9 @@ const Footer = () => {
         <div className="flex flex-col gap-4 lg:col-span-2">
           <div className="flex items-center gap-2.5">
             <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/10">
-              <img src={hmpiLogo} alt="Logo HMPI" className="h-full w-full object-cover" />
+              <img src={hmpiLogo} alt="Logo HMPI" className="rounded-full object-cover" />
             </span>
-            <span className="font-display text-lg font-bold text-white">HMPI</span>
+            <span className="font-display text-lg font-bold text-white">HMPI.UP</span>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-slate-soft">
             Himpunan Mahasiswa Prodi Informatika adalah organisasi mahasiswa
@@ -85,7 +85,7 @@ const Footer = () => {
           <p className="mt-4 text-sm leading-relaxed text-slate-soft">
             HMPI Universitas Peradaban
             <br />
-             Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276
+            Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276
           </p>
           <p className="mt-3 font-mono text-xs text-slate-soft">
             hmpiinformatikaupb@gmail.com

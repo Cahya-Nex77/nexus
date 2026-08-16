@@ -94,7 +94,7 @@ const LogoIntro = () => {
             className="flex flex-col items-center gap-2"
           >
             <span className="font-display text-2xl font-bold tracking-[0.15em] text-white sm:text-3xl">
-              HMPI
+              HMPI.UP
             </span>
             <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-slate-soft">
               Himpunan Mahasiswa Prodi Informatika

@@ -236,8 +236,8 @@ const Members = () => {
                     key={divisionKey}
                     onClick={() => setActiveDivision(divisionKey)}
                     className={`rounded-full border px-4 py-2 text-xs font-medium transition-all duration-300 sm:text-sm ${isActive
-                        ? "border-cyan-glow bg-cyan-glow/10 text-cyan-glow"
-                        : "border-white/10 text-slate-soft hover:border-white/30 hover:text-white"
+                      ? "border-cyan-glow bg-cyan-glow/10 text-cyan-glow"
+                      : "border-white/10 text-slate-soft hover:border-white/30 hover:text-white"
                       }`}
                   >
                     {t.divisions[divisionKey]}

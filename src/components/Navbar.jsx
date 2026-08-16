@@ -32,7 +32,24 @@ const Navbar = () => {
     document.body.style.overflow = menuOpen || joinModalOpen ? "hidden" : "auto";
   }, [menuOpen, joinModalOpen]);
 
-  const handleNavClick = () => setMenuOpen(false);
+  // FUNGSI PERBAIKAN NAVIGASI DENGAN TIMEOUT
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+
+    // 1. Tutup menu mobile
+    setMenuOpen(false);
+
+    // 2. Buka kunci scroll pada body secara paksa
+    document.body.style.overflow = "auto";
+
+    // 3. Beri sedikit jeda 100ms agar menu menutup penuh, lalu scroll ke elemen tujuan
+    setTimeout(() => {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   const openJoinModal = () => {
     setMenuOpen(false);
@@ -43,17 +60,15 @@ const Navbar = () => {
     <div className={`flex items-center bg-white/5 border border-white/10 rounded-full p-0.5 ${className}`}>
       <button
         onClick={() => toggleLang("id")}
-        className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
-          lang === "id" ? "bg-white/10 text-white" : "text-slate-soft"
-        }`}
+        className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${lang === "id" ? "bg-white/10 text-white" : "text-slate-soft"
+          }`}
       >
         ID
       </button>
       <button
         onClick={() => toggleLang("en")}
-        className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
-          lang === "en" ? "bg-white/10 text-white" : "text-slate-soft"
-        }`}
+        className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${lang === "en" ? "bg-white/10 text-white" : "text-slate-soft"
+          }`}
       >
         EN
       </button>
@@ -63,28 +78,29 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "glass-nav shadow-card" : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav shadow-card" : "bg-transparent"
+          }`}
       >
         <nav className="section-padding !py-4 flex items-center justify-between">
-          <a href="#beranda" className="flex items-center gap-2.5 group perspective-1000">
-            {/* UBAH: rounded-xl menjadi rounded-full */}
+          <a
+            href="#beranda"
+            onClick={(e) => handleNavClick(e, "#beranda")}
+            className="flex items-center gap-2.5 group perspective-1000"
+          >
             <motion.span
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
               className="preserve-3d flex h-10 w-10 items-center justify-center overflow-hidden rounded-full shadow-glow ring-1 ring-white/10"
             >
-              {/* UBAH: Ditambahkan rounded-full & object-cover */}
-              <img 
-                src={hmpiLogo} 
-                alt="Logo HMPI" 
-                className="h-full w-full object-cover rounded-full" 
+              <img
+                src={hmpiLogo}
+                alt="Logo HMPI"
+                className="h-full w-full object-cover rounded-full"
               />
             </motion.span>
             <span className="flex flex-col leading-tight">
               <span className="font-display font-bold text-lg text-white tracking-wide">
-                HMPI
+                HMPI.UP
               </span>
               <span className="hidden sm:block text-[10px] font-mono tracking-widest text-slate-soft uppercase">
                 Prodi Informatika
@@ -97,6 +113,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="relative px-4 py-2 text-sm font-medium text-slate-soft transition-colors duration-200 hover:text-white group"
                 >
                   {link.label}
@@ -141,7 +158,7 @@ const Navbar = () => {
                   >
                     <a
                       href={link.href}
-                      onClick={handleNavClick}
+                      onClick={(e) => handleNavClick(e, link.href)}
                       className="block rounded-lg px-4 py-3 text-slate-soft transition-colors hover:bg-white/5 hover:text-white"
                     >
                       {link.label}

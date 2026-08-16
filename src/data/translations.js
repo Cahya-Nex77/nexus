@@ -9,7 +9,7 @@ export const translations = {
             kontak: "Kontak",
         },
 
-        joinButton: "Gabung HMPI",
+        joinButton: "Gabung HMPI.UP",
 
         hero: {
             badge: "Himpunan Mahasiswa Prodi Informatika",
@@ -20,7 +20,7 @@ export const translations = {
                 "HMPI (Himpunan Mahasiswa Prodi Informatika) adalah wadah pengembangan potensi, kreativitas, dan solidaritas mahasiswa dalam bidang teknologi dan informatika.",
             ctaPrimary: "Jelajahi Program Kerja",
             ctaSecondary: "Kenali Anggota Kami",
-            stats: ["28 Anggota Aktif", "19 Program Kerja", "4 Divisi"],
+            stats: ["21 Anggota Aktif", "1 Program Kerja", "4 Divisi"],
             uptimeLabel: "Uptime Sistem",
             uptimeValue: "78.8% Aktif",
         },
@@ -31,7 +31,7 @@ export const translations = {
             subtitle:
                 "Himpunan Mahasiswa Prodi Informatika hadir sebagai wadah aspirasi, kolaborasi, dan pengembangan diri mahasiswa Informatika menuju generasi teknologi yang unggul.",
             stats: [
-                { value: 20, suffix: "", label: "Anggota Aktif" },
+                { value: 21, suffix: "", label: "Anggota Aktif" },
                 { value: 1, suffix: "", label: "Program Kerja Selesai" },
                 { value: 4, suffix: "", label: "Divisi Organisasi" },
             ],
