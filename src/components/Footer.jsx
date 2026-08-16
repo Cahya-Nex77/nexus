@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Youtube, Mail, ArrowUp } from "lucide-react";
 import hmpiLogo from "../assets/hmpi-logo.jpg";
+import { BsTiktok } from "react-icons/bs";
 
 const quickLinks = [
   { label: "Beranda", href: "#beranda" },
@@ -12,8 +13,8 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/hmpi.up?igsh=MXdvcHVsNXVqbDU1Zg==", label: "Instagram" },
-  { icon: Youtube, href: "https://www.youtube.com/@hmpi.up", label: "YouTube" },
+  { icon: Instagram, href: "https://instagram.com/hmpi.informatika", label: "Instagram" },
+  { icon: BsTiktok, href: "https://tiktok.com/@hmpi.up", label: "TikTok" },
   { icon: Mail, href: "mailto:hmpiinformatikaupb@gmail.com", label: "Email" },
 ];
 
@@ -34,7 +35,7 @@ const Footer = () => {
           </div>
           <p className="max-w-md text-sm leading-relaxed text-slate-soft">
             Himpunan Mahasiswa Prodi Informatika adalah organisasi mahasiswa
-            yang berfokus pada pengembangan keilmuan, karya, dan karakter
+            yang berfokus pada pengembangan potensi, kreativitas, dan solidaritas
             mahasiswa Informatika melalui program kerja yang inovatif dan
             berdampak nyata.
           </p>
@@ -82,12 +83,12 @@ const Footer = () => {
             Sekretariat
           </h4>
           <p className="mt-4 text-sm leading-relaxed text-slate-soft">
-            Gedung Fakultas Ilmu Komputer, Kampus Informatika
+            HMPI Universitas Peradaban
             <br />
-            Lantai 2, Ruang Organisasi Mahasiswa
+             Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276
           </p>
           <p className="mt-3 font-mono text-xs text-slate-soft">
-            hmpi@kampusinformatika.ac.id
+            hmpiinformatikaupb@gmail.com
           </p>
         </div>
       </div>
