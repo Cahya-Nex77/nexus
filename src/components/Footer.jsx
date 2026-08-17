@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Youtube, Mail, ArrowUp } from "lucide-react";
+import { Instagram, Youtube, Mail, ArrowUp, MapPin } from "lucide-react";
 import hmpiLogo from "../assets/hmpi-logo.jpg";
 import { BsTiktok } from "react-icons/bs";
 
@@ -13,9 +13,26 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://instagram.com/hmpi.up", label: "Instagram" },
-  { icon: BsTiktok, href: "https://tiktok.com/@hmpi.up", label: "TikTok" },
-  { icon: Mail, href: "mailto:hmpiinformatikaupb@gmail.com", label: "Email" },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/hmpi.up?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    label: "Instagram"
+  },
+  {
+    icon: BsTiktok,
+    href: "https://www.tiktok.com/@hmpi.up?is_from_webapp=1&sender_device=pc",
+    label: "TikTok"
+  },
+  {
+    icon: MapPin,
+    href: "https://maps.app.goo.gl/cgx35cUBYJZzDZSR8",
+    label: "Google Maps"
+  },
+  {
+    icon: Mail,
+    href: "mailto:hmpiinformatikaupb@gmail.com",
+    label: "Email"
+  },
 ];
 
 const Footer = () => {
@@ -82,11 +99,16 @@ const Footer = () => {
           <h4 className="font-display text-sm font-semibold uppercase tracking-wide text-white">
             Sekretariat
           </h4>
-          <p className="mt-4 text-sm leading-relaxed text-slate-soft">
+          <a
+            href="https://maps.app.goo.gl/cgx35cUBYJZzDZSR8"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 block text-sm leading-relaxed text-slate-soft transition-colors hover:text-cyan-glow"
+          >
             HMPI Universitas Peradaban
             <br />
             Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah 52276
-          </p>
+          </a>
           <p className="mt-3 font-mono text-xs text-slate-soft">
             hmpiinformatikaupb@gmail.com
           </p>

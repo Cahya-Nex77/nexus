@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Mail,
@@ -7,6 +7,7 @@ import {
   Send,
   CheckCircle2,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import SectionHeading from "./ui/SectionHeading.jsx";
 
 const TikTokIcon = ({ size = 20 }) => (
@@ -20,7 +21,6 @@ const TikTokIcon = ({ size = 20 }) => (
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.96a8.18 8.18 0 0 0 4.78 1.52V7.03a4.85 4.85 0 0 1-1.01-.34z" />
   </svg>
 );
-
 
 const contactInfo = [
   {
@@ -46,14 +46,16 @@ const contactInfo = [
 ];
 
 const initialForm = {
-  name: "",
-  email: "",
+  user_name: "",
+  user_email: "",
   message: "",
 };
 
 const Contact = () => {
+  const formRef = useRef();
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -67,14 +69,33 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!form.name || !form.email || !form.message) return;
+    if (!form.user_name || !form.user_email || !form.message) return;
 
-    setSubmitted(true);
+    setLoading(true);
 
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm(initialForm);
-    }, 3000);
+    // KUNCI EMAILJS
+    const SERVICE_ID = "service_gyohclo";
+    const TEMPLATE_ID = "template_1v62mi6";
+    const PUBLIC_KEY = "amyZ9quOeCj7L8x1F";
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(
+        () => {
+          setLoading(false);
+          setSubmitted(true);
+
+          setTimeout(() => {
+            setSubmitted(false);
+            setForm(initialForm);
+          }, 3000);
+        },
+        (error) => {
+          setLoading(false);
+          alert("Gagal mengirim pesan, silakan coba lagi.");
+          console.error("EmailJS Error:", error);
+        }
+      );
   };
 
   return (
@@ -143,6 +164,7 @@ const Contact = () => {
 
         {/* Form Kontak */}
         <motion.form
+          ref={formRef}
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -153,17 +175,17 @@ const Contact = () => {
           {/* Nama */}
           <div className="flex flex-col gap-2">
             <label
-              htmlFor="name"
+              htmlFor="user_name"
               className="text-sm font-medium text-slate-soft"
             >
               Nama Lengkap
             </label>
 
             <input
-              id="name"
-              name="name"
+              id="user_name"
+              name="user_name"
               type="text"
-              value={form.name}
+              value={form.user_name}
               onChange={handleChange}
               placeholder="Masukkan nama lengkap"
               required
@@ -174,17 +196,17 @@ const Contact = () => {
           {/* Email */}
           <div className="flex flex-col gap-2">
             <label
-              htmlFor="email"
+              htmlFor="user_email"
               className="text-sm font-medium text-slate-soft"
             >
               Alamat Email
             </label>
 
             <input
-              id="email"
-              name="email"
+              id="user_email"
+              name="user_email"
               type="email"
-              value={form.email}
+              value={form.user_email}
               onChange={handleChange}
               placeholder="nama@email.com"
               required
@@ -216,11 +238,12 @@ const Contact = () => {
           {/* Tombol Kirim */}
           <motion.button
             type="submit"
+            disabled={loading}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.96 }}
-            className="btn-primary w-full sm:w-fit"
+            className="btn-primary w-full sm:w-fit disabled:opacity-50"
           >
-            Kirim Pesan
+            {loading ? "Mengirim..." : "Kirim Pesan"}
             <Send size={16} />
           </motion.button>
 

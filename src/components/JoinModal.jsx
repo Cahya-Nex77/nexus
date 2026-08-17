@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, CheckCircle2, Send, ChevronDown, Check } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import hmpiLogo from "../assets/hmpi-logo.jpg";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { translations } from "../data/translations.js";
@@ -54,8 +55,8 @@ const GlassDropdown = ({ value, onChange, options }) => {
                                         type="button"
                                         onClick={() => handleSelect(option)}
                                         className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[13px] transition-colors ${isActive
-                                                ? "bg-white/15 text-white"
-                                                : "text-slate-soft hover:bg-white/10 hover:text-white"
+                                            ? "bg-white/15 text-white"
+                                            : "text-slate-soft hover:bg-white/10 hover:text-white"
                                             }`}
                                     >
                                         {option}
@@ -101,16 +102,13 @@ const JoinModal = ({ isOpen, onClose }) => {
         setLoading(true);
         setError("");
 
-        try {
-            const response = await fetch("http://localhost:5000/api/join", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(form),
-            });
+        // KUNCI EMAILJS
+        const SERVICE_ID = "service_gyohclo";
+        const TEMPLATE_ID = "template_fznms8i";
+        const PUBLIC_KEY = "amyZ9quOeCj7L8x1F";
 
-            if (!response.ok) {
-                throw new Error("Gagal mengirim data");
-            }
+        try {
+            await emailjs.send(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY);
 
             setSubmitted(true);
             setTimeout(() => {
@@ -119,6 +117,7 @@ const JoinModal = ({ isOpen, onClose }) => {
                 onClose();
             }, 2000);
         } catch (err) {
+            console.error("EmailJS Error:", err);
             setError("Gagal mengirim pendaftaran. Coba lagi.");
         } finally {
             setLoading(false);
@@ -157,7 +156,8 @@ const JoinModal = ({ isOpen, onClose }) => {
 
                         {/* Side panel */}
                         <div className="hidden w-64 shrink-0 flex-col justify-between bg-gradient-to-br from-indigo-glow/90 via-purple-700/80 to-cyan-glow/80 p-7 sm:flex">
-                            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white/15 ring-1 ring-white/20">
+                            {/* Logo bulat sempurna */}
+                            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white/15 ring-1 ring-white/20">
                                 <img src={hmpiLogo} alt="Logo HMPI" className="h-full w-full object-cover" />
                             </div>
                             <div>
